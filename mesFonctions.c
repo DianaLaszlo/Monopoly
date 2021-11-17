@@ -3,7 +3,7 @@
 //
 
 #include "mesFonctions.h"
-
+#include "mesStructures.h"
 #include "stdio.h"
 
 void debutDePartie(){
@@ -18,3 +18,23 @@ void debutDePartie(){
     }
     return;
 }
+
+void saisieDesJoueurs(){
+    int nbDeJoueurs=0;
+    int flush=0;
+    Joueurs unJoueur;
+    printf("Combien de joueurs vont jouer cette partie ? \n");
+    scanf("%d",&nbDeJoueurs);
+    for (int i=1; i<=nbDeJoueurs; i++){
+        printf("Saisissez le NOM du joueur %d \n",i);
+        scanf("%d",&flush);
+        scanf("%s",&unJoueur.nom);
+        printf("%s vous aurez le numéro %d ! \n\n",unJoueur.nom,i);
+        unJoueur.numero=i;
+    }
+    return;
+}
+
+void affichageParametresJoueurs(){
+    for (int i=0; i<=);
+    printf();
