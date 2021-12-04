@@ -1,0 +1,37 @@
+#define MIN 1
+#define MAX 6
+
+int getRandomIntegerDes(){
+    srand(time(NULL));
+    int random = 0;
+    for (int i = 0; i < 1; i++){
+        random = rand() % (MAX - MIN) + MIN;
+        printf("%d\n", random);
+    }
+    return  random;
+}
+
+
+int deAleatoire(){
+    int de = 0;
+    int* pDe = &de;
+    de = getRandomIntegerDes();
+    return *pDe;
+}
+
+int lanceDes(int* pDe1, int* pDe2){
+    int nbDoubles = 0;
+    do {
+        *pDe1 = deAleatoire();
+        *pDe2 = deAleatoire();
+        printf("Vous avez obtenu %d et %d.\n",*pDe1, *pDe2);
+        if (*pDe1 == *pDe2){
+            ++nbDoubles;
+            printf("Vous avez fait %d doubles.\n", nbDoubles);
+            printf("Avancez de %d case(s).\n", *pDe1+*pDe2);
+        }
+    } while (nbDoubles < 3);
+    printf("Trois doubles consecutifs, allez directement en prison.\n");
+
+    return 0;
+}
