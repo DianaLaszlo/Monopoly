@@ -1,0 +1,19 @@
+int deplacement(const int* pDe1, const int* pDe2, int* posX, int* posY){
+    int somme = (*pDe1)+(*pDe2);
+    for (int k = 0; k < somme; k++){
+        if (*posY == 0 && *posX < COLONNES){
+            *posX += 1;
+        }
+        else if (*posX == COLONNES && *posY < LIGNES){
+            *posY += 1; //!!!attention a ne pas passer 2 fois dans les angles
+        }
+        else if (*posX > 0 && *posX <= COLONNES && *posY == LIGNES){ //!!! peut etre *posY <= LIGNES
+            *posX -= 1;
+        }
+        else if(*posY > 0 && *posY <= LIGNES && *posX == 0){ //!!! peut etre *posY <= LIGNES
+            *posY -= 1;
+        }
+    }
+
+    return 0;
+}

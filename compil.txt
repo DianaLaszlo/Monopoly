@@ -1,0 +1,22 @@
+void jeu(){
+    Joueur joueur;
+    joueur.positionX = 0;
+    joueur.positionY = 0;
+    int* posX = &(joueur.positionX);
+    int* posY = &(joueur.positionY);
+
+    int de1 = 0,de2 = 0;
+    int* pDe1 = &de1;
+    int* pDe2 = &de2;
+
+    int lancedes = 0;
+    //printf("Le premier joueur a lancer les des est le joueur %d.\n ",joueurAleatoire(saisieDesJoueurs()));
+    tableau();
+    printf("Tapez [1] pour lancer les des.\n");
+    scanf("%d", &lancedes);
+    if(lancedes == 1){
+        lanceDes(pDe1, pDe2, posX, posY);
+    }
+
+    return;
+}
