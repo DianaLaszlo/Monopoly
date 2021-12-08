@@ -3,8 +3,8 @@
 
 
 int main() {
-    infoCases();
-    afficherCases(infoCases(),31);
+    afficherCases(infoCases(),2);
+    //int nbrJoueur = 0;
 
-    return 0;
+    //bouclepartie(nbrJoueur);
 }
